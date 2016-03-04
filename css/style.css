@@ -1,0 +1,177 @@
+/* ---- reset ---- */
+body {
+	margin: 0;
+	font: normal 75% Arial, Helvetica, sans-serif;
+}
+/* 遮罩层 */
+.fes-overlay {
+	background: #000;
+	filter: alpha(opacity=50); /* IE的透明度 */
+	opacity: 0.5;
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 11;
+	display: none;
+}
+canvas {
+	display: block;
+	vertical-align: bottom;
+}
+#particles-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	/*display: none;*/
+	filter: alpha(opacity=80); /* IE的透明度 */
+	top: 0px;
+	/*left: 0px;*/
+	z-index: 11;
+	opacity: 0.8
+}
+.lantern, .lantern-small {
+	top: 0;
+	display: none;
+	background-image: url("../img/lantern.png");
+	position: fixed;
+	z-index: 19;
+	animation: SlideDown 0.5s;
+	-moz-animation: SlideDown 0.5s;
+	-webkit-animation: SlideDown 0.5s;
+}
+.lantern {
+	left: 30%;
+	width: 5em;
+	height: 22.5em;
+	background-size: 100% 100%
+}
+.lantern-small {
+	left: 34%;
+	width: 4em;
+	height: 18em;
+	background-size: 81px 420px;
+	background-size: 100% 100%
+}
+.spring-bottom {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 162px;
+	z-index: 18;
+	background: url("../img/bottom.png") no-repeat 50% 50%;
+	animation: SlideUp 0.5s;
+	-moz-animation: SlideUp 0.5s;
+	-webkit-animation: SlideUp 0.5s;
+}
+.fes-main {
+	background: url("../img/main.png") no-repeat 50% 50%;
+	display: none;
+	width: 729px;
+	height: 534px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 18;
+	background-size: 100% 100%;
+	animation: ZoomIn 0.5s;
+	-moz-animation: ZoomIn 0.5s;
+	-webkit-animation: ZoomIn 0.5s;
+}
+.fes-close {
+	background: url("../img/close.png") no-repeat 50% 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 68px;
+	width: 68px;
+	cursor: pointer;
+}
+@keyframes SlideDown {
+	from {
+		top: -20%;
+	}
+	to {
+		top: 0;
+	}
+}
+@-moz-keyframes SlideDown {
+	from {
+		top: -300px;
+	}
+	to {
+		top: 0;
+	}
+}
+@-webkit-keyframes SlideDown {
+	from {
+		top: -20%;
+	}
+	to {
+		top: 0;
+	}
+}
+@keyframes SlideUp {
+	from {
+		bottom: -100px;
+	}
+	to {
+		bottom: 0;
+	}
+}
+@-moz-keyframes SlideUp {
+	from {
+		bottom: -100px;
+	}
+	to {
+		bottom: 0;
+	}
+}
+@-webkit-keyframes SlideUp {
+	from {
+		bottom: -100px;
+	}
+	to {
+		bottom: 0;
+	}
+}
+@keyframes ZoomIn {
+	from {
+		width: 364px;
+		height: 267px;
+	}
+	to {
+		width: 729px;
+		height: 534px
+	}
+}
+@-moz-keyframes ZoomIn {
+	from {
+		width: 364px;
+		height: 267px;
+	}
+	to {
+		width: 729px;
+		height: 534px
+	}
+}
+@-webkit-keyframes ZoomIn {
+	from {
+		width: 364px;
+		height: 267px;
+	}
+	to {
+		width: 729px;
+		height: 534px
+	}
+}
